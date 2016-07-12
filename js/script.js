@@ -38,7 +38,9 @@ function loadData() {
                 '<p>' + article.snippet + '</p>'+
                 '</li>');
         };
-    })
+    }).error(function(e) {
+        $nytElemHeader.text("New Your Times Article Could Not Be Loaded");
+    });
 
     return false;
 };
